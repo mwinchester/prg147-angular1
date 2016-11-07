@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Learning Angular JS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Room Painting Estimate</h1>
+    </header>
+    <div ng-app="myApp" ng-controller="myCtrl" ng-init="length = 0; width = 0; height = 0;" class="container">
+
+        <span class="form-label">First Name: </span>
+        <input type="text" ng-model="firstName" class="form-entry">
+        <span class="form-label">Last Name: </span>
+        <input type="text" ng-model="lastName" class="form-entry">
+        <br>
+        <span class="form-label">Room Height: </span>
+        <input type="text" ng-model="height" class="form-entry">
+        <br>
+        <span class="form-label">Room Length: </span>
+        <input type="text" ng-model="length" class="form-entry">
+        <br>
+        <span class="form-label">Room Width: </span>
+        <input type="text" ng-model="width" class="form-entry">
+
+
+
+
+        <br>
+        <p>Estimate for: {{firstName + " " + lastName}}</p>
+        <p>Square footage of the room is: {{(length*height)*2 + (width*height)*2}} </p>
+        <p>At $.70 per square foot, the estimate comes to: ${{((length*height)*2 + (width*height)*2) * .75}}</p>
+
+    </div>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope) {
+            $scope
+
+
+        });
+    </script>
+</body>
+
+</html>

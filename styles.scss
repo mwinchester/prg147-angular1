@@ -1,0 +1,39 @@
+/*       variables      */
+
+$blue: rgb(0, 0, 255);
+$green: rgb(0, 255, 0);
+$red: rgb(255, 0, 0);
+$white: rgb(255, 255, 255);
+$grey: rgb(83, 83, 83);
+$border: 1px solid $red;
+body {
+    background: black;
+    color: white;
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+.container {
+    max-width: 1060px;
+    margin: 5px auto;
+    padding: 15px;
+    border: $border;
+    min-height: 400px;
+    background: $grey;
+}
+
+h1 {
+    color: $white;
+    font-size: 2.5em;
+    font-weight: 400;
+    text-align: center
+}
+
+.form-label {
+    padding: 5px 10px;
+}
+
+.form-entry {
+    margin-bottom: 10px;
+    margin-right: 2em;
+}
